@@ -1,7 +1,5 @@
-/**
- * Contacts controller to handle database operations
- */
 const mongodb = require('../db/connection');
+const ObjectId = require('mongodb').ObjectId;
 
 const getAll = async (req, res, next) => {
     const result = await mongodb.getDb().db('contacts_db').collection('contacts').find();
@@ -12,7 +10,9 @@ const getAll = async (req, res, next) => {
 };
 
 const getSingle = async (req, res, next) => {
-    const result = await mongodb.getDb().db('contacts_db').collection('contacts').find();
+    // Obtenemos el ID de la URL
+    const userId = new ObjectId(req.params.id);
+    const result = await mongodb.getDb().db('contacts_db').collection('contacts').find({ _id: userId });
     result.toArray().then((lists) => {
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(lists[0]);
@@ -20,5 +20,3 @@ const getSingle = async (req, res, next) => {
 };
 
 module.exports = { getAll, getSingle };
-
-// Final update checked.
