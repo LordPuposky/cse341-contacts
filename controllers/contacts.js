@@ -20,3 +20,5 @@ const getSingle = async (req, res, next) => {
 };
 
 module.exports = { getAll, getSingle };
+
+// Final update checked.
