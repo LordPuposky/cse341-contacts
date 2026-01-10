@@ -1,0 +1,16 @@
+### GET ALL CONTACTS
+GET https://cse341-contacts-w6ms.onrender.com/contacts
+
+
+### GET CONTACT BY ID - Donald Trump
+GET https://cse341-contacts-w6ms.onrender.com/contacts/6962caf9afa3d1647143167c
+
+
+### GET CONTACT BY ID - Elon Musk
+GET https://cse341-contacts-w6ms.onrender.com/contacts/6962d585afa3d1647143167f
+
+
+### GET CONTACT BY ID - Yesid Romero
+GET https://cse341-contacts-w6ms.onrender.com/contacts/6962d5f8afa3d16471431680
+
+GET http://localhost:8080/contacts
