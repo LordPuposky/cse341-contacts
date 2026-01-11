@@ -10,7 +10,6 @@ const getAll = async (req, res, next) => {
 };
 
 const getSingle = async (req, res, next) => {
-    // Obtenemos el ID de la URL
     const userId = new ObjectId(req.params.id);
     const result = await mongodb.getDb().db('contacts_db').collection('contacts').find({ _id: userId });
     result.toArray().then((lists) => {

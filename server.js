@@ -15,7 +15,6 @@ app.use((req, res, next) => {
     next();
 });
 
-// Import and use routes (We will create this file next)
 app.use('/', require('./routes'));
 
 mongodb.initDb((err) => {
