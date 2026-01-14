@@ -1,16 +1,35 @@
-### GET ALL CONTACTS
-GET https://cse341-contacts-w6ms.onrender.com/contacts
+### Localhost Variables
+@localhost = http://localhost:8080
 
+### GET all contacts
+GET {{localhost}}/contacts
 
-### GET CONTACT BY ID - Donald Trump
-GET https://cse341-contacts-w6ms.onrender.com/contacts/6962caf9afa3d1647143167e
+### GET contact by id
+GET {{localhost}}/contacts/6966f1c47a777529f0b512a8
 
+### POST create contact
+POST {{localhost}}/contacts HTTP/1.1
+Content-Type: application/json
 
-### GET CONTACT BY ID - Elon Musk
-GET https://cse341-contacts-w6ms.onrender.com/contacts/6962d585afa3d1647143167f
+{
+    "firstName": "Yesid",
+    "lastName": "Romero Ruiz",
+    "email": "yesid@test.com",
+    "favoriteColor": "Blue",
+    "birthday": "1979-01-18"
+}
 
+### PUT update contact
+PUT {{localhost}}/contacts/6966f1c47a777529f0b512a8 HTTP/1.1
+Content-Type: application/json
 
-### GET CONTACT BY ID - Yesid Romero
-GET https://cse341-contacts-w6ms.onrender.com/contacts/6962d5f8afa3d16471431680
+{
+    "firstName": "Yesid Augusto",
+    "lastName": "Romero Ruiz",
+    "email": "yesid_updated@test.com",
+    "favoriteColor": "Green",
+    "birthday": "1979-01-18"
+}
 
-GET http://localhost:8080/contacts
+### DELETE contact
+DELETE {{localhost}}/contacts/6966f1c47a777529f0b512a8 HTTP/1.1
