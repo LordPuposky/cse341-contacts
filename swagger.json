@@ -1,14 +1,14 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "My API",
-    "description": "Temples API",
+    "title": "Contacts API",
+    "description": "Contacts API for W02 Project",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "cse341-contacts-w6ms.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/": {
